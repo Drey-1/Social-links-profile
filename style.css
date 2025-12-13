@@ -41,69 +41,64 @@ body {
     margin-bottom: 24px;
 }
 
-.photo {
+.card__photo {
     width: 100px;
     height: 100px;
     border-radius: 50px;
     transition: transform 0.3s ease, outline 0.4s ; 
 }
 
-.photo:hover {
+.card__photo:hover {
   transform: scale(1.2);
   outline: 3px solid var(--grey-700);
 }
 
-.personal-infos {
+.card__personal-infos {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.name {
+.card__name {
     font-size: var(--text-lg);
     font-weight: 700;
     color: var(--white);
 }
 
-.locate {
+.card__locate {
     font-size: var(--text-sm);
     font-weight: 600;
     color: var(--green);
 }
 
-.description {
+.card__description {
     font-size: var(--text-sm);
     font-weight: 400;
     color: var(--white);
 }
 
-.navigation {
+.card__navigation {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 12px;
 }
 
-.btn {
+.card__btn {
     background-color: var(--grey-700);
     padding: 12px;
     border: 0;
     border-radius: 10px;
     transition: background-color 0.3s ease, outline 0.3s ease ;
-}
-
-.btn:hover {
-    background-color: var(--white);
-    outline: 3px solid var(--grey-700);
-}
-
-.btn:hover > .link {
-    color: var(--grey-800);
-}
-
-.link {
     font-size: var(--text-sm);
     font-weight: 700;
     color: var(--white);
+    text-align: center;
     text-decoration: none;
+}
+
+.card__btn:hover {
+    background-color: var(--white);
+    outline: 3px solid var(--grey-700);
+    color: var(--grey-800);
 }
