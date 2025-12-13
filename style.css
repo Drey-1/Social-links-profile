@@ -19,7 +19,7 @@
 
 body {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
     background-color: var(--grey-900);
@@ -97,7 +97,7 @@ body {
     text-decoration: none;
 }
 
-.card__btn:hover {
+.card__btn:hover, .card__btn:focus-visible {
     background-color: var(--white);
     outline: 3px solid var(--grey-700);
     color: var(--grey-800);
