@@ -1,9 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    src: url(assets/fonts/inter-v20-latin-regular.woff2) format("woff2");
+}
 
-* {
+@font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    src: url(assets/fonts/inter-v20-latin-600.woff2) format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    src: url(assets/fonts/inter-v20-latin-700.woff2) format("woff2");
+}
+
+/* RESET */
+*, *::before, *::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+img, picture, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style-type: none;
 }
 
 :root {
@@ -31,32 +76,32 @@ body {
     flex-direction: column;
     width: 382px;
     max-width: 90%;
-    padding: 26px;
+    padding: 38px;
+    gap: 24px;
     align-items: center;
     border-radius: 10px;
     background-color: var(--grey-800);
 }
 
-.card > *:not(:last-child) {
-    margin-bottom: 24px;
-}
-
 .card__photo {
-    width: 100px;
-    height: 100px;
+    width: 5.6rem;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 12px;
     border-radius: 50px;
     transition: transform 0.3s ease, outline 0.4s ; 
 }
 
 .card__photo:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   outline: 3px solid var(--grey-700);
 }
 
-.card__personal-infos {
+.card__header {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    justify-content: center;
+    align-items: center;
 }
 
 .card__name {
@@ -75,21 +120,31 @@ body {
     font-size: var(--text-sm);
     font-weight: 400;
     color: var(--white);
+    text-align: center;
 }
 
 .card__navigation {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    gap: 12px;
 }
 
-.card__btn {
+.card__item {
+    width: 100%;
+}
+
+.card__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card__link {
+    display: inline-block;
+    width: 100%;
     background-color: var(--grey-700);
-    padding: 12px;
+    padding: 14px;
     border: 0;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, outline 0.3s ease ;
+    border-radius: 7px;
+    transition: background-color 0.3s ease, outline 0.3s ease;
     font-size: var(--text-sm);
     font-weight: 700;
     color: var(--white);
@@ -97,8 +152,8 @@ body {
     text-decoration: none;
 }
 
-.card__btn:hover, .card__btn:focus-visible {
-    background-color: var(--white);
+.card__link:hover, .card__link:focus-visible {
+    background-color: var(--green);
     outline: 3px solid var(--grey-700);
     color: var(--grey-800);
 }
