@@ -3,24 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" href="./assets/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./assets/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="./assets/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin/>
+
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
   <title>Frontend Mentor | Social links profile</title>
 </head>
 <body>
   <main class="card">
-    <img class="card__photo" src="assets/images/avatar-jessica.jpeg" alt="A woman photo with a clean background wearing a black coat">
-    <div class="card__personal-infos">
+    <header class="card__header">
+      <img class="card__photo" src="assets/images/avatar-jessica.jpeg" alt="Jessica Randall wearing a black coat shot on a clean background" width="176" height="176">
       <h1 class="card__name">Jessica Randall</h1>
       <p class="card__locate">London, United Kingdom</p>
-    </div>
+    </header>
     <p class="card__description">"Front-end developer and avid reader."</p>
     <nav class="card__navigation">
-        <a class="card__btn" href="#">GitHub</a>
-        <a class="card__btn" href="#">Frontend Mentor</a>
-        <a class="card__btn" href="#">LinkedIn</a>
-        <a class="card__btn" href="#">Twitter</a>
-        <a class="card__btn" href="#">Instagram</a>
+      <ul class="card__socials">
+        <li class="card__item">
+          <a class="card__link" href="#">GitHub</a>
+        </li>
+        <li class="card__item">
+          <a class="card__link" href="#">Frontend Mentor</a>
+        </li>
+        <li class="card__item">
+          <a class="card__link" href="#">LinkedIn</a>
+        </li>
+        <li class="card__item">
+          <a class="card__link" href="#">Twitter</a>
+        </li>
+        <li class="card__item">
+          <a class="card__link" href="#">Instagram</a>
+        </li>
+      </ul>
     </nav>
   </main>
 </body>
